@@ -9,6 +9,7 @@ public class Task2 {
 
         numsFilling(arr, in);
         findMaxrepeats(arr);
+        findMinrepeats(arr);
     }
     public static void numsFilling(int[] arr, Scanner in) {
         for (int i = 0; i < arr.length; i++) {
@@ -28,5 +29,19 @@ public class Task2 {
             if (count >= max)
                 max = count;
         }
-        System.out.println("Result: " + max);}}
+        System.out.println("Result of max repeats: " + max);}
+
+     public static void findMinrepeats(int[]arr){
+         int min = Integer.MAX_VALUE;
+         for (int i = 0; i < arr.length-1; i++) {
+             int count = 0;
+             for (int j = 0; j < arr.length; j++) {
+                 if (arr[i]==arr[j])
+                     count++;
+             }
+             if (count <= min)
+                 min = count;
+         }
+         System.out.println("Result of min repeats: " + min);
+}}
 
