@@ -5,7 +5,7 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
 
         String line = scanner.nextLine();
-        String[] numbers = line.split(" ");
+        String[] numbers = line.split(",");
 
         int[] realNumbers = new int[numbers.length];
         for (int i = 0; i < numbers.length; i++) {
