@@ -13,8 +13,9 @@ public class Task1 {
         int[] nums = new int[length];
         for (int i = 0; i < nums.length; i++) {
             nums[i] = in.nextInt ();
-            in.nextLine();
         }
+            in.nextLine();
+
         findMinvalue ( nums );
         findMaxvalue ( nums );
         findRepetitions ( nums, 5 );
