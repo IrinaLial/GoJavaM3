@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
-
         System.out.print("Array size: ");
         int length = in.nextInt();
         in.nextLine();
@@ -15,6 +13,11 @@ public class Task1 {
             nums[i] = in.nextInt ();
         }
             in.nextLine();
+
+        //или еще такой вариант ввода размера массива
+        //int size = in.nextInt();
+        //int[] nums = new int[size];
+
 
         findMinvalue ( nums );
         findMaxvalue ( nums );
