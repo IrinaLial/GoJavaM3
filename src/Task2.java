@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[]args){
         Scanner in = new Scanner(System.in);
-
         System.out.print("Array size: ");
         int length = in.nextInt();
         in.nextLine();
@@ -12,13 +11,14 @@ public class Task2 {
         int[] arr = new int[length];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = in.nextInt ();
+        }
             in.nextLine();
 
         findMaxrepeats(arr);
         findMinrepeats(arr);
-    }}
+    }
 
-        public static void findMaxrepeats(int[]arr){
+    public static void findMaxrepeats (int[] arr) {
 
         int max = 0;
         for (int i = 0; i < arr.length; i++) {
