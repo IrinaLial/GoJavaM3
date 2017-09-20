@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        Scanner in = new Scanner ( System.in );
-        System.out.println ( "Type array size:" );
-        int[] nums;
-        nums = new int[in.nextInt ()];
 
-        numsFilling ( nums, in );
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Array size: ");
+        int length = in.nextInt();
+        in.nextLine();
+
+        System.out.print("Your array is: ");
+        int[] nums = new int[length];
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = in.nextInt ();
+            in.nextLine();
+        }
         findMinvalue ( nums );
         findMaxvalue ( nums );
         findRepetitions ( nums, 5 );
-        sortingNums ( nums );
-    }
+        sortingNums ( nums );}
 
-    public static void numsFilling(int[] nums, Scanner in) {
-        for (int i = 0; i < nums.length; i++) {
-            System.out.println ( "Type " + (i + 1) + " index:" );
-            nums[i] = in.nextInt ();
-        }
-    }
 
     public static void findMinvalue(int[] nums) {
         int min = Integer.MAX_VALUE;
