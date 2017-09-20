@@ -3,19 +3,20 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[]args){
         Scanner in = new Scanner(System.in);
-        System.out.println("Type array size:");
-        int[] arr;
-        arr = new int[in.nextInt()];
 
-        numsFilling(arr, in);
+        System.out.print("Array size: ");
+        int length = in.nextInt();
+        in.nextLine();
+
+        System.out.print("Your array is: ");
+        int[] arr = new int[length];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = in.nextInt ();
+            in.nextLine();
+
         findMaxrepeats(arr);
         findMinrepeats(arr);
-    }
-    public static void numsFilling(int[] arr, Scanner in) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println("Type " + (i + 1) + " index:");
-            arr[i] = in.nextInt();
-        }}
+    }}
 
         public static void findMaxrepeats(int[]arr){
 
@@ -29,9 +30,10 @@ public class Task2 {
             if (count >= max)
                 max = count;
         }
-        System.out.println("Result of max repeats: " + max);}
+            System.out.println ( "Result of max repeats: " + max);}
 
-     public static void findMinrepeats(int[]arr){
+
+    public static void findMinrepeats(int[]arr){
          int min = Integer.MAX_VALUE;
          for (int i = 0; i < arr.length-1; i++) {
              int count = 0;
